@@ -21,6 +21,7 @@ from utils.preprocessing import (
     adaptive_enhance,
     crop_with_padding,
     ocr_preprocess_attempts,
+    refine_plate_crop_dynamic,
     resize_max_side,
 )
 
@@ -33,6 +34,12 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--no-save-crops", action="store_true", help="Do not save plate crops.")
     p.add_argument("--window-name", type=str, default="License Plate Detection (OCR)")
     p.add_argument("--max-images", type=int, default=0, help="Limit number of images (0 = all).")
+    p.add_argument(
+        "--min-ocr-conf",
+        type=float,
+        default=0.20,
+        help="Minimum OCR confidence to accept a detected plate in report.",
+    )
     return p.parse_args()
 
 
@@ -83,7 +90,8 @@ def main() -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     report_path = output_dir / f"plate_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
 
-    detected_lines: list[str] = []
+    detected_candidates_by_image: dict[str, list[tuple[str, float, float, str]]] = {}
+    low_conf_rejections_by_image: dict[str, list[tuple[str, float, float, str]]] = {}
     undetected_images: list[str] = []
     processed_count = 0
 
@@ -127,6 +135,8 @@ def main() -> None:
                 det.xyxy,
                 pad_ratio=cfg.crop_padding_ratio,
             )
+            # Dynamic refinement: tighten coarse detector ROI to plate-like region.
+            crop = refine_plate_crop_dynamic(crop)
 
             # OCR on crop: enhance first, then generate multiple thresholding attempts.
             crop_enh = adaptive_enhance(
@@ -158,14 +168,15 @@ def main() -> None:
                 )
 
             ocr_outputs.append((det, plate_text, ocr_conf, ocr_source))
-            if plate_text:
+            if plate_text and ocr_conf >= args.min_ocr_conf:
                 image_detected_texts.append(plate_text)
-                detected_lines.append(
-                    (
-                        f"{item.path.name} | plate={plate_text} | det_conf={det.conf:.3f} "
-                        f"| ocr_conf={ocr_conf:.3f} | ocr_source={ocr_source}"
-                    )
-                )
+                if item.path.name not in detected_candidates_by_image:
+                    detected_candidates_by_image[item.path.name] = []
+                detected_candidates_by_image[item.path.name].append((plate_text, det.conf, ocr_conf, ocr_source))
+            elif plate_text:
+                if item.path.name not in low_conf_rejections_by_image:
+                    low_conf_rejections_by_image[item.path.name] = []
+                low_conf_rejections_by_image[item.path.name].append((plate_text, det.conf, ocr_conf, ocr_source))
 
         for det, plate_text, ocr_conf, ocr_source in ocr_outputs:
             viz.draw_plate_annotation(
@@ -186,7 +197,12 @@ def main() -> None:
         key = cv2.waitKey(1) & 0xFF
 
         if not image_detected_texts:
-            reason = "no_plate_detected" if len(detections) == 0 else "plate_detected_but_ocr_empty"
+            if len(detections) == 0:
+                reason = "no_plate_detected"
+            elif item.path.name in low_conf_rejections_by_image:
+                reason = f"plate_detected_but_low_ocr_conf(<{args.min_ocr_conf:.2f})"
+            else:
+                reason = "plate_detected_but_ocr_empty"
             undetected_images.append(f"{item.path.name} | reason={reason}")
 
         # Keyboard controls:
@@ -209,10 +225,35 @@ def main() -> None:
         f.write(f"Generated: {datetime.now().isoformat(timespec='seconds')}\n")
         f.write(f"Processed images: {processed_count}\n")
         f.write(f"Source folders: {cfg.dataset_dir_1} | {cfg.dataset_dir_2}\n")
-        f.write("\n=== DETECTED NUMBER PLATES ===\n")
-        if detected_lines:
-            for line in detected_lines:
-                f.write(f"{line}\n")
+        f.write("\n=== DETECTED NUMBER PLATES (BEST PER IMAGE) ===\n")
+        if detected_candidates_by_image:
+            best_entries: list[tuple[str, str, float, float, str]] = []
+            for image_name, cands in detected_candidates_by_image.items():
+                # Keep only the highest OCR-confidence candidate for each image.
+                best = sorted(cands, key=lambda x: x[2], reverse=True)[0]
+                best_entries.append((image_name, best[0], best[1], best[2], best[3]))
+
+            # Sort overall by OCR confidence (highest first).
+            best_entries.sort(key=lambda x: x[3], reverse=True)
+
+            f.write(f"Total detected images: {len(best_entries)}\n")
+            f.write("Sorted by OCR confidence (desc)\n\n")
+            for image_idx, (image_name, plate_text, det_conf, ocr_conf, ocr_source) in enumerate(best_entries, start=1):
+                f.write(f"[{image_idx}] {image_name}\n")
+                f.write("-" * 72 + "\n")
+                f.write(
+                    f"  Plate: {plate_text:<12}  det_conf={det_conf:.3f}  "
+                    f"ocr_conf={ocr_conf:.3f}  src={ocr_source}\n\n"
+                )
+
+            # Separate, stricter summary for quick review.
+            high_conf = [e for e in best_entries if e[3] >= 0.50]
+            f.write("=== HIGH CONFIDENCE PLATES (OCR >= 0.50) ===\n")
+            if high_conf:
+                for image_idx, (image_name, plate_text, _, ocr_conf, _) in enumerate(high_conf, start=1):
+                    f.write(f"{image_idx}. {plate_text}  |  {image_name}  |  ocr_conf={ocr_conf:.3f}\n")
+            else:
+                f.write("None\n")
         else:
             f.write("None\n")
 

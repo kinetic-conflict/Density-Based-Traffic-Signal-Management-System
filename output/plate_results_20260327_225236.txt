@@ -1,0 +1,107 @@
+License Plate Detection + OCR Results
+Generated: 2026-03-27T23:09:28
+Processed images: 25
+Source folders: D:\VIT_ACADEMICS\MDP_SW\Indian_Number_Plates\Sample_Images | D:\VIT_ACADEMICS\MDP_SW\number_plate_images_ocr\number_plate_images_ocr
+
+=== DETECTED NUMBER PLATES (BEST PER IMAGE) ===
+Total detected images: 18
+Sorted by OCR confidence (desc)
+
+[1] Datacluster_number_plates (49).jpg
+------------------------------------------------------------------------
+  Plate: 5122          det_conf=0.230  ocr_conf=1.000  src=easyocr
+
+[2] Datacluster_number_plates (36).jpg
+------------------------------------------------------------------------
+  Plate: 2859          det_conf=0.411  ocr_conf=1.000  src=easyocr
+
+[3] Datacluster_number_plates (64).jpg
+------------------------------------------------------------------------
+  Plate: 3             det_conf=0.397  ocr_conf=1.000  src=easyocr
+
+[4] Datacluster_number_plates (16).jpg
+------------------------------------------------------------------------
+  Plate: POWERED       det_conf=0.423  ocr_conf=1.000  src=easyocr
+
+[5] Datacluster_number_plates (66).jpg
+------------------------------------------------------------------------
+  Plate: MP            det_conf=0.354  ocr_conf=1.000  src=easyocr
+
+[6] Datacluster_number_plates (80).jpg
+------------------------------------------------------------------------
+  Plate: 999           det_conf=0.406  ocr_conf=1.000  src=easyocr
+
+[7] Datacluster_number_plates (73).jpg
+------------------------------------------------------------------------
+  Plate: 207           det_conf=0.368  ocr_conf=0.990  src=easyocr
+
+[8] Datacluster_number_plates (1).jpg
+------------------------------------------------------------------------
+  Plate: 00741         det_conf=0.209  ocr_conf=0.985  src=easyocr
+
+[9] Datacluster_number_plates (11).jpg
+------------------------------------------------------------------------
+  Plate: W             det_conf=0.374  ocr_conf=0.933  src=easyocr
+
+[10] Datacluster_number_plates (22).jpg
+------------------------------------------------------------------------
+  Plate: TN18D1866     det_conf=0.357  ocr_conf=0.910  src=easyocr
+
+[11] Datacluster_number_plates (84).jpg
+------------------------------------------------------------------------
+  Plate: 2             det_conf=0.386  ocr_conf=0.891  src=easyocr
+
+[12] Datacluster_number_plates (53).jpg
+------------------------------------------------------------------------
+  Plate: KA38M1674     det_conf=0.352  ocr_conf=0.816  src=easyocr
+
+[13] Datacluster_number_plates (18).jpg
+------------------------------------------------------------------------
+  Plate: TN23L4547     det_conf=0.204  ocr_conf=0.781  src=easyocr
+
+[14] Datacluster_number_plates (101).jpg
+------------------------------------------------------------------------
+  Plate: 02248         det_conf=0.457  ocr_conf=0.683  src=easyocr
+
+[15] Datacluster_number_plates (55).jpg
+------------------------------------------------------------------------
+  Plate: 22859         det_conf=0.387  ocr_conf=0.648  src=easyocr
+
+[16] Datacluster_number_plates (70).jpg
+------------------------------------------------------------------------
+  Plate: LS            det_conf=0.410  ocr_conf=0.630  src=easyocr
+
+[17] Datacluster_number_plates (79).jpg
+------------------------------------------------------------------------
+  Plate: SKOIPC0456    det_conf=0.493  ocr_conf=0.494  src=easyocr
+
+[18] Datacluster_number_plates (4).jpg
+------------------------------------------------------------------------
+  Plate: ZRO917267     det_conf=0.535  ocr_conf=0.474  src=easyocr
+
+=== HIGH CONFIDENCE PLATES (OCR >= 0.50) ===
+1. 5122  |  Datacluster_number_plates (49).jpg  |  ocr_conf=1.000
+2. 2859  |  Datacluster_number_plates (36).jpg  |  ocr_conf=1.000
+3. 3  |  Datacluster_number_plates (64).jpg  |  ocr_conf=1.000
+4. POWERED  |  Datacluster_number_plates (16).jpg  |  ocr_conf=1.000
+5. MP  |  Datacluster_number_plates (66).jpg  |  ocr_conf=1.000
+6. 999  |  Datacluster_number_plates (80).jpg  |  ocr_conf=1.000
+7. 207  |  Datacluster_number_plates (73).jpg  |  ocr_conf=0.990
+8. 00741  |  Datacluster_number_plates (1).jpg  |  ocr_conf=0.985
+9. W  |  Datacluster_number_plates (11).jpg  |  ocr_conf=0.933
+10. TN18D1866  |  Datacluster_number_plates (22).jpg  |  ocr_conf=0.910
+11. 2  |  Datacluster_number_plates (84).jpg  |  ocr_conf=0.891
+12. KA38M1674  |  Datacluster_number_plates (53).jpg  |  ocr_conf=0.816
+13. TN23L4547  |  Datacluster_number_plates (18).jpg  |  ocr_conf=0.781
+14. 02248  |  Datacluster_number_plates (101).jpg  |  ocr_conf=0.683
+15. 22859  |  Datacluster_number_plates (55).jpg  |  ocr_conf=0.648
+16. LS  |  Datacluster_number_plates (70).jpg  |  ocr_conf=0.630
+
+=== UNDETECTED IMAGES (listed at end) ===
+Datacluster_number_plates (38).jpg | reason=plate_detected_but_ocr_empty
+Datacluster_number_plates (5).jpg | reason=no_plate_detected
+Datacluster_number_plates (62).jpg | reason=no_plate_detected
+Datacluster_number_plates (86).jpg | reason=no_plate_detected
+Datacluster_number_plates (89).jpg | reason=no_plate_detected
+Datacluster_number_plates (90).jpg | reason=plate_detected_but_ocr_empty
+Datacluster_number_plates (95).jpg | reason=plate_detected_but_ocr_empty

@@ -1,0 +1,28 @@
+License Plate Detection + OCR Results
+Generated: 2026-03-27T23:05:49
+Processed images: 3
+Source folders: D:\VIT_ACADEMICS\MDP_SW\Indian_Number_Plates\Sample_Images | D:\VIT_ACADEMICS\MDP_SW\number_plate_images_ocr\number_plate_images_ocr
+
+=== DETECTED NUMBER PLATES (BEST PER IMAGE) ===
+Total detected images: 3
+Sorted by OCR confidence (desc)
+
+[1] Datacluster_number_plates (1).jpg
+------------------------------------------------------------------------
+  Plate: 00741         det_conf=0.209  ocr_conf=0.985  src=easyocr
+
+[2] Datacluster_number_plates (11).jpg
+------------------------------------------------------------------------
+  Plate: W             det_conf=0.374  ocr_conf=0.933  src=easyocr
+
+[3] Datacluster_number_plates (101).jpg
+------------------------------------------------------------------------
+  Plate: 02248         det_conf=0.457  ocr_conf=0.683  src=easyocr
+
+=== HIGH CONFIDENCE PLATES (OCR >= 0.50) ===
+1. 00741  |  Datacluster_number_plates (1).jpg  |  ocr_conf=0.985
+2. W  |  Datacluster_number_plates (11).jpg  |  ocr_conf=0.933
+3. 02248  |  Datacluster_number_plates (101).jpg  |  ocr_conf=0.683
+
+=== UNDETECTED IMAGES (listed at end) ===
+None

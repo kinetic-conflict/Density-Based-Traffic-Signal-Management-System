@@ -1,0 +1,38 @@
+License Plate Detection + OCR Results
+Generated: 2026-03-27T23:11:46
+Processed images: 5
+Source folders: D:\VIT_ACADEMICS\MDP_SW\Indian_Number_Plates\Sample_Images | D:\VIT_ACADEMICS\MDP_SW\number_plate_images_ocr\number_plate_images_ocr
+
+=== DETECTED NUMBER PLATES (BEST PER IMAGE) ===
+Total detected images: 5
+Sorted by OCR confidence (desc)
+
+[1] Datacluster_number_plates (16).jpg
+------------------------------------------------------------------------
+  Plate: POWERED       det_conf=0.423  ocr_conf=0.995  src=easyocr
+
+[2] Datacluster_number_plates (1).jpg
+------------------------------------------------------------------------
+  Plate: 00741         det_conf=0.209  ocr_conf=0.985  src=easyocr
+
+[3] Datacluster_number_plates (18).jpg
+------------------------------------------------------------------------
+  Plate: TN23L4547     det_conf=0.204  ocr_conf=0.956  src=easyocr
+
+[4] Datacluster_number_plates (101).jpg
+------------------------------------------------------------------------
+  Plate: MPI2E         det_conf=0.457  ocr_conf=0.867  src=easyocr
+
+[5] Datacluster_number_plates (11).jpg
+------------------------------------------------------------------------
+  Plate: I0            det_conf=0.390  ocr_conf=0.692  src=easyocr
+
+=== HIGH CONFIDENCE PLATES (OCR >= 0.50) ===
+1. POWERED  |  Datacluster_number_plates (16).jpg  |  ocr_conf=0.995
+2. 00741  |  Datacluster_number_plates (1).jpg  |  ocr_conf=0.985
+3. TN23L4547  |  Datacluster_number_plates (18).jpg  |  ocr_conf=0.956
+4. MPI2E  |  Datacluster_number_plates (101).jpg  |  ocr_conf=0.867
+5. I0  |  Datacluster_number_plates (11).jpg  |  ocr_conf=0.692
+
+=== UNDETECTED IMAGES (listed at end) ===
+None

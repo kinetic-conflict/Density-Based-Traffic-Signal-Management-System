@@ -53,7 +53,7 @@ class PlateReader:
         if easy_text:
             return OCRResult(easy_text, easy_conf, "easyocr")
         if tess_text:
-            return OCRResult(tess_text, tess_conf, "tesseract")
+            return OCRResult(tess_text, tess_conf, src)
         return OCRResult("", 0.0, "none")
 
     def _easyocr_once(self, img: np.ndarray) -> tuple[str, float]:
