@@ -1,0 +1,68 @@
+License Plate Detection + OCR Results
+Generated: 2026-03-27T22:00:03
+Processed images: 47
+Source folders: D:\VIT_ACADEMICS\MDP_SW\Indian_Number_Plates\Sample_Images | D:\VIT_ACADEMICS\MDP_SW\number_plate_images_ocr\number_plate_images_ocr
+
+=== DETECTED NUMBER PLATES ===
+Datacluster_number_plates (1).jpg | plate=FN | det_conf=0.227 | ocr_conf=0.008 | ocr_source=easyocr
+Datacluster_number_plates (18).jpg | plate=INN4 | det_conf=0.252 | ocr_conf=0.005 | ocr_source=easyocr
+Datacluster_number_plates (18).jpg | plate=TN23L4547 | det_conf=0.217 | ocr_conf=0.756 | ocr_source=easyocr
+Datacluster_number_plates (4).jpg | plate=ZROGU7267 | det_conf=0.472 | ocr_conf=0.395 | ocr_source=easyocr
+Datacluster_number_plates (49).jpg | plate=MH20BC5122 | det_conf=0.219 | ocr_conf=0.944 | ocr_source=easyocr
+Datacluster_number_plates (49).jpg | plate=MH20BC5122 | det_conf=0.212 | ocr_conf=0.944 | ocr_source=easyocr
+Datacluster_number_plates (53).jpg | plate=KA38M1674 | det_conf=0.396 | ocr_conf=0.816 | ocr_source=easyocr
+Datacluster_number_plates (70).jpg | plate=A | det_conf=0.180 | ocr_conf=0.861 | ocr_source=easyocr
+Datacluster_number_plates (70).jpg | plate=TX | det_conf=0.141 | ocr_conf=0.015 | ocr_source=easyocr
+Datacluster_number_plates (73).jpg | plate=112OZ | det_conf=0.162 | ocr_conf=0.455 | ocr_source=easyocr
+Datacluster_number_plates (79).jpg | plate=SKOPCO456 | det_conf=0.522 | ocr_conf=0.456 | ocr_source=easyocr
+Datacluster_number_plates (79).jpg | plate=03 | det_conf=0.515 | ocr_conf=0.251 | ocr_source=easyocr
+Datacluster_number_plates (80).jpg | plate=800 | det_conf=0.174 | ocr_conf=0.959 | ocr_source=easyocr
+Datacluster_number_plates (96).jpg | plate=P03TC4945 | det_conf=0.451 | ocr_conf=0.941 | ocr_source=easyocr
+dc_auto_image_000021_bMXgvtud5K.jpg | plate=KL35 | det_conf=0.522 | ocr_conf=0.977 | ocr_source=easyocr
+dc_auto_image_000021_bMXgvtud5K.jpg | plate=4AIAPI | det_conf=0.504 | ocr_conf=0.013 | ocr_source=easyocr
+dc_auto_image_000021_bMXgvtud5K.jpg | plate=PT | det_conf=0.499 | ocr_conf=0.116 | ocr_source=easyocr
+dc_auto_image_000021_bMXgvtud5K.jpg | plate=465 | det_conf=0.459 | ocr_conf=0.768 | ocr_source=easyocr
+dc_auto_image_000024_fqvRhfiO6i.jpg | plate=KHA | det_conf=0.382 | ocr_conf=0.128 | ocr_source=easyocr
+dc_bus_image_000039_9NispLHmAo.jpg | plate=498262 | det_conf=0.560 | ocr_conf=0.660 | ocr_source=easyocr
+dc_bus_image_000039_9NispLHmAo.jpg | plate=0782 | det_conf=0.545 | ocr_conf=0.326 | ocr_source=easyocr
+dc_license_plates_0RBAQHKIXQMDFYZD.jpg | plate=5 | det_conf=0.423 | ocr_conf=0.620 | ocr_source=easyocr
+dc_license_plates_0RRPJCID3RRLSFTI.jpg | plate=173672T | det_conf=0.194 | ocr_conf=0.024 | ocr_source=easyocr
+dc_license_plates_0RRPJCID3RRLSFTI.jpg | plate=173672T | det_conf=0.164 | ocr_conf=0.024 | ocr_source=easyocr
+dc_license_plates_0RRPJCID3RRLSFTI.jpg | plate=173672T | det_conf=0.150 | ocr_conf=0.024 | ocr_source=easyocr
+dc_license_plates_3GKHBM5PWHYXHMTE.jpg | plate=KL41LZOO1 | det_conf=0.541 | ocr_conf=0.539 | ocr_source=easyocr
+dc_license_plates_3HE1J0YIRGRDENVO.jpg | plate=DS352 | det_conf=0.293 | ocr_conf=0.455 | ocr_source=easyocr
+dc_license_plates_7K9NEIDD2KK46L6F.jpg | plate=23 | det_conf=0.357 | ocr_conf=0.402 | ocr_source=easyocr
+dc_license_plates_VZUYOAPZ8633ZQTN.jpg | plate=8210204807 | det_conf=0.462 | ocr_conf=0.176 | ocr_source=easyocr
+dc_license_plates_VZUYOAPZ8633ZQTN.jpg | plate=8 | det_conf=0.323 | ocr_conf=0.109 | ocr_source=easyocr
+dc_license_plates_VZUYOAPZ8633ZQTN.jpg | plate=4 | det_conf=0.303 | ocr_conf=0.745 | ocr_source=easyocr
+dc_tempo_van__image_000489_73h4cMU8Z1.jpg | plate=HPI3G49452 | det_conf=0.449 | ocr_conf=0.604 | ocr_source=easyocr
+dc_tempo_van__image_000490_CF9bwJsyoX.jpg | plate=47M | det_conf=0.571 | ocr_conf=0.044 | ocr_source=easyocr
+dc_tempo_van__image_000490_CF9bwJsyoX.jpg | plate=5 | det_conf=0.503 | ocr_conf=0.631 | ocr_source=easyocr
+
+=== UNDETECTED IMAGES (listed at end) ===
+Datacluster_number_plates (101).jpg | reason=no_plate_detected
+Datacluster_number_plates (11).jpg | reason=no_plate_detected
+Datacluster_number_plates (16).jpg | reason=no_plate_detected
+Datacluster_number_plates (22).jpg | reason=no_plate_detected
+Datacluster_number_plates (36).jpg | reason=no_plate_detected
+Datacluster_number_plates (38).jpg | reason=plate_detected_but_ocr_empty
+Datacluster_number_plates (5).jpg | reason=no_plate_detected
+Datacluster_number_plates (55).jpg | reason=no_plate_detected
+Datacluster_number_plates (62).jpg | reason=no_plate_detected
+Datacluster_number_plates (64).jpg | reason=plate_detected_but_ocr_empty
+Datacluster_number_plates (66).jpg | reason=no_plate_detected
+Datacluster_number_plates (84).jpg | reason=no_plate_detected
+Datacluster_number_plates (86).jpg | reason=no_plate_detected
+Datacluster_number_plates (89).jpg | reason=no_plate_detected
+Datacluster_number_plates (90).jpg | reason=no_plate_detected
+Datacluster_number_plates (95).jpg | reason=no_plate_detected
+Datacluster_number_plates (99).jpg | reason=no_plate_detected
+dc_bus_image_000033_XUH0eV452t.jpg | reason=plate_detected_but_ocr_empty
+dc_license_plates_2D9KWCA7PLD0NW31.jpg | reason=no_plate_detected
+dc_license_plates_2DZ4YT4ZJ9XJZSO0.jpg | reason=plate_detected_but_ocr_empty
+dc_license_plates_7L53OMODJOLUGUOE.jpg | reason=no_plate_detected
+dc_license_plates_VTPRN3NAPF8MUGNF.jpg | reason=plate_detected_but_ocr_empty
+dc_license_plates_VYA8KOAVKLW6PJYK.jpg | reason=no_plate_detected
+dc_license_plates_W1W3000C6IAY3F1X.jpg | reason=no_plate_detected
+dc_truck_image_001561_IEhCyPTs.jpg | reason=plate_detected_but_ocr_empty
+dc_truck_image_001564_RZeQ1TZR.jpg | reason=no_plate_detected
